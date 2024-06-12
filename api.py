@@ -6,7 +6,7 @@ def search(q, API):
 
     params = {
         "key": API,
-        "cx": "17443d41540ec4ddc",
+        "cx": "YOUR-CSE-ID",
         "lr": "lang_en",
         "q": q,
     }
