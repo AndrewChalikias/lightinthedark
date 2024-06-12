@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>LightInTheDark</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel='stylesheet' type='text/css' media='screen' href='results.css'>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='results.css') }}'>
+    </head>
+    <body>
+        <main>
+            <div id="topSearchArea">
+                <div>
+                    <a href="{{ url_for('index') }}" id="logoLink">
+                        <span id="logo" style="text-shadow: 0px 0px 4px yellow;">🌙</span>
+                    </a>
+                </div>
+            <div id="searchArea">
+                <form action="{{ url_for('results') }}" method="GET">
+                    <div>
+                        <input type="text" id="searchInput" name="q" autocomplete="off" placeholder="Search anything...">
+                    </div>
+                    <div>
+                        <button id="searchButton" type="submit">
+                            <img src="{{ url_for('static', filename='search.svg') }}" alt="Search icon">
+                        </button>
+                    </div>
+                </form>
+            </div>
+            </div>
+            <div id="resultsFor">
+                <span>
+                    Search results for
+                    <span style="font-weight: bold;">
+                        {{ searchQuery }}
+                    </span>
+                </span>
+            </div>
+            <div>
+                {% for result in searchResults %}
+                    <div id="result">
+                        <a href="{{ result["link"] }}" target="_blank" id="resultTitle">
+                            {{ result["title"] }}
+                        </a>
+                        <span id="resultLink">
+                            <a href="{{ result["link"] }}" target="_blank">
+                                {{ result["link"] }}
+                            </a>
+                        </span>
+                        <span id="resultSnippet">
+                            {{ result["snippet"] }}
+                        </span>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+        <footer>
+            <span style="display: block; color: #FFFFFF;">🄯 2024 - It ain't much, but it's honest work :p</span>
+        </footer>
+    </body>
+</html>
