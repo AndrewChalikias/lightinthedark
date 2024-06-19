@@ -56,7 +56,19 @@
             </div>
         </main>
         <footer>
-            <span style="display: block; color: #FFFFFF;">🄯 2024 - It ain't much, but it's honest work :p</span>
+            <div id="privacyPolicy">
+                <a href='{{ url_for('privacyPolicy') }}'>Privacy policy</a>
+            </div>
+            <div style="color: #FFFFFF;">-</div>
+            <div id="status">
+                <a href="">Status</a>
+            </div>
+            <div style="color: #FFFFFF;">-</div>
+            <div>
+                <a href="https://ko-fi.com/andrewchalikias" target="_blank">
+                    <img src="{{ url_for('static', filename='kofi.webp') }}" alt="Ko-Fi logo" style="width:40px;">
+                </a>
+            </div>
         </footer>
     </body>
 </html>
