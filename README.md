@@ -36,4 +36,4 @@ Next, go to the **line 9** of the **`api.py`** file and change the value of the 
 
 ##### Run the project
 
-Type `python3 main.py` it will start a localhost server, the default port is *5000* but you can change it by passing `port=*portnumber*` as a parameter inside the app.run() on the last line.
+Type `python3 main.py` it will start a localhost server, the default port is *5000* but you can change it by passing `port=portnumber` as a parameter inside the app.run() on the last line.
