@@ -1,5 +1,7 @@
 ![](https://res.cloudinary.com/dtsgph9b9/image/upload/v1719337472/screenshot_nkmkoq.png)
 
+## This was my first project made for fun. **Do NOT** use it in production. Never hardcode API keys, use safe storage such as environment variables.
+
 **LightInTheDark** is a custom search engine that uses the Google Cloud JSON API and the Python Flask module to handle the search results, the web server and the URL routes.
 [Live Demo](https://lightinthedark.eu.pythonanywhere.com/)
 
